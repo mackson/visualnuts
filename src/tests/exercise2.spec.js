@@ -16,9 +16,9 @@ describe('Run Exercise 2', () => {
     const mostCommonLanguagesTest = mostCommonLanguages();
 
     expect(countWorldCountriesTest).toBeGreaterThan(0);
-    expect(countOfficialLanguagesSpeakDeTest).not.toBeNull();
+    expect(countOfficialLanguagesSpeakDeTest.length).toBeGreaterThan(0);
     expect(countAllOfficialLanguagesTest.length).toBeGreaterThan(0);
-    expect(findHighestOfficialLanguagesTest).not.toBeNull();
+    expect(findHighestOfficialLanguagesTest.length).toBeGreaterThan(0);
     expect(mostCommonLanguagesTest.length).toBeGreaterThan(0);
   });
 });

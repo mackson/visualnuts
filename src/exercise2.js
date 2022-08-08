@@ -22,13 +22,9 @@ export const countOfficialLanguagesSpeakDe = () => {
   const countOfficialLanguagesSpeakDe = [... new Set(countriesLanguages.filter(countries => countries.languages.includes('de') ))];
   const countMaxOfficialLanguagesSpeakDe = Math.max(...countOfficialLanguagesSpeakDe.map(country => country.languages.length ));
   const getMaxOfficialLanguagesSpeakDe = countriesLanguages.filter(country => country.languages.length === countMaxOfficialLanguagesSpeakDe);
-  console.log(
-    '2 - The country with the most official languages, where they officially speak German (de):', 
-    getMaxOfficialLanguagesSpeakDe [0].country, 
-    '('+getMaxOfficialLanguagesSpeakDe [0].languages.join(', ')+')', 
-    countMaxOfficialLanguagesSpeakDe+' Languages'
-  );
-  return [0].languages;
+  console.log('2 - The country with the most official languages, where they officially speak German (de):');
+  console.table(getMaxOfficialLanguagesSpeakDe);
+  return getMaxOfficialLanguagesSpeakDe;
 };
 
 export const countAllOfficialLanguages = () => {
@@ -48,13 +44,9 @@ export const findHighestOfficialLanguages = () => {
   // 4 - Find the country with the highest number of official languages.
   const countHighestOfficialLanguages = Math.max(...countriesLanguages.map(country => country.languages.length ));
   const getHighestOfficialLanguages = countriesLanguages.filter(country => country.languages.length === countHighestOfficialLanguages);
-  console.log(
-    '4 - The country with the highest number of official languages:', 
-    getHighestOfficialLanguages [0].country,
-    '('+getHighestOfficialLanguages [0].languages.join(', ')+')',
-    countHighestOfficialLanguages+' Languages'
-  );
-  return [0].languages;
+  console.log('4 - The country with the highest number of official languages:');
+  console.table(getHighestOfficialLanguages);
+  return getHighestOfficialLanguages;
 };
 
 export const mostCommonLanguages = () => {

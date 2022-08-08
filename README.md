@@ -1,4 +1,4 @@
-# Visual Nuts Excercises
+# Visual Nuts Exercises
 
 General notes: For all exercises we expect actual runnable javascript code and test to be
 provided. Imagine that all code you provide here is of the highest importance for the company,
