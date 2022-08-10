@@ -52,7 +52,7 @@ export const findHighestOfficialLanguages = () => {
 export const mostCommonLanguages = () => {
   // 5 - Find the most common official language(s), of all countries.
   let combinedArray = [];
-  [... new Set(countriesLanguages.map(country => combinedArray.push(...country.languages) ))];
+  countriesLanguages.map(country => combinedArray.push(...country.languages) );
   const mostCommon = getMostFrequent(combinedArray);
   console.log('5 - The most common official language(s), of all countries:', mostCommon.join(', '));
   return mostCommon;
